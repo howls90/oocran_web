@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Training</h2>
+  <p>Please take look at this tutorials in order to test the OOCRAN platform:</p>
+  <h3>Installation</h3>
+  <%= render "layouts/link", action: "trains" %>
+  <h3>Orchestrator</h3>
+    <% @orchestrator.each do |train| %>
+      <%= render "collapse", train: train %>
+    <%end%>
+  <%= render "layouts/link", action: "trains" %>
+  <!--<h3>Cloud Cluster</h3>
+  <% @cluster.each do |train| %>
+      <%= render "collapse", train: train %>
+  <%end%>
+  <%= render "layouts/link", action: "trains" %>-->
+  <h3>U-TRAN</h3>
+  <% @utran.each do |train| %>
+      <%= render "collapse", train: train %>
+  <%end%>
+  <%= render "layouts/link", action: "trains" %>
+  <!--<h3>EPC</h3>
+  <% @epc.each do |train| %>
+      <%= render "collapse", train: train %>
+  <%end%>
+  <%= render "layouts/link", action: "trains" %>
+  <h3>IMS</h3>
+  <% @ims.each do |train| %>
+      <%= render "collapse", train: train %>
+  <%end%>
+  <%= render "layouts/link", action: "trains" %>-->
+</div>

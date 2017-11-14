@@ -1,0 +1,54 @@
+<div class="container">
+  <br>
+  <h2>Goals</h2>
+  <h3>Orchestrator</h3>
+  <table class="table table-bordered">
+    <%= render "fields" %>
+    <tbody>
+      <% @orchestrator.each do |goal| %>
+        <%= render "goal", goal: goal %>
+      <%end%>
+    </tbody>
+  </table>
+  <%= render "layouts/link", action: "goals" %>
+  <!--<h3>Cloud Cluster</h3>
+  <table class="table table-bordered">
+    <%= render "fields" %>
+    <tbody>
+      <% @cluster.each do |goal| %>
+        <%= render "goal", goal: goal %>
+      <%end%>
+    </tbody>
+  </table>-->
+  <%= render "layouts/link", action: "goals" %>
+  <h3>U-TRAN</h3>
+  <table class="table table-bordered">
+    <%= render "fields" %>
+    <tbody>
+      <% @utran.each do |goal| %>
+        <%= render "goal", goal: goal %>
+      <%end%>
+    </tbody>
+  </table>
+  <!--<%= render "layouts/link", action: "goals" %>
+  <h3>EPC</h3>
+  <table class="table table-bordered">
+    <%= render "fields" %>
+    <tbody>
+      <% @epc.each do |goal| %>
+        <%= render "goal", goal: goal %>
+      <%end%>
+    </tbody>
+  </table>
+  <%= render "layouts/link", action: "goals" %>
+  <h3>IMS</h3>
+  <table class="table table-bordered">
+    <%= render "fields" %>
+    <tbody>
+      <% @ims.each do |goal| %>
+        <%= render "goal", goal: goal %>
+      <%end%>
+    </tbody>
+  </table>
+  <%= render "layouts/link", action: "goals" %>-->
+</div>

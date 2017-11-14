@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="oocran">
+    <serverData>
+      <paths name="Copy of project-level server 'oocran'">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/odissey09/OOCRAN-web" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Copy of project-level server 'oocran' (1)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/odissey09/OOCRAN-web/" local="$PROJECT_DIR$/" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Copy of project-level server 'oocran' (2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/odissey09/OOCRAN-web/" local="$PROJECT_DIR$/" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="oocran">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/odissey09/OOCRAN-web/app/" local="$PROJECT_DIR$/app/" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/db" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

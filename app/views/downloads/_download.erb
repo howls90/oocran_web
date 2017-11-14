@@ -1,0 +1,12 @@
+<tr>
+  <td><%= download.name %></td>
+  <td><%= download.description %></td>
+  <td><%= download.created_at.strftime("%d-%m-%Y") %></td>
+  <td><%= download.links %></td>
+  <% if user_signed_in? %>
+      <th>
+        <%= link_to "Delete", download,class: "btn btn-danger", method: :delete %>
+        <%= link_to "Update", edit_download_path(download), class: "btn btn-warning"  %>
+      </th>
+  <%end%>
+</tr>

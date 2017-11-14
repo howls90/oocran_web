@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0b17c6a7-1e87-45fb-929f-3a89a9fe186d" name="oocran" url="http://oocran.dynu.com">
+        <fileTransfer host="oocran.dynu.com" port="90" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="90" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

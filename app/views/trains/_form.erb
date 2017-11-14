@@ -1,0 +1,23 @@
+<br>
+<h1><%= name %> Train</h1>
+<%= form_for(@train) do |f| %>
+    <% @train.errors.full_messages.each do |message| %>
+        <%= message%>
+    <%end%>
+    <div class="form-group">
+      <%= f.text_field :name,placeholder: "Name",class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_area :description,placeholder: "Description",class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :wiki,placeholder: "Wiki",class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.select :tipo, [["Installation", "Installation"], ["Orchestrator", "Orchestrator"], ["Cloud Cluster","Cluster"],["U-TRAN","U-TRAN"],["EPC", "EPC"], ["IMS", "IMS"], ["Infrastructure", "Infrastructure"]], class: "selectpicker" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :video,placeholder: "Video",class: "form-control" %>
+    </div>
+    <%= f.submit "Submit", class:"btn btn-default"%>
+<%end%>

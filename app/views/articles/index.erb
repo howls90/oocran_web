@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>News</h1>
+  <% @articles.each do |article| %>
+      <div>
+        <div style="height: 270px;width:250px;float:left;vertical-align: middle">
+          <%=image_tag article.cover.url(:thumb) %>
+        </div>
+        <div style="height: 230px">
+          <h1><%= link_to article.title, article, style:"text-decoration:none;color: #0f0f0f;font-weight: 900" %></h1>
+          <h4><%= article.created_at.strftime("%B %d, %Y") %></h4>
+          <%= truncate(article.body, :length => 230)  %>
+          <h5><%= link_to "Read more", article,class:"btn btn-primary btn-lg",style:"float:right;background-color: #373a3c;border-color: #373a3c" %></h5>
+        </div>
+      </div>
+      <hr>
+  <%end%>
+  <br>
+  <%= render "layouts/link", action: "articles" %>
+</div>

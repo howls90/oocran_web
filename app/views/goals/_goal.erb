@@ -1,0 +1,12 @@
+<tr>
+  <td><%= goal.name %></td>
+  <td><%= goal.assigned_to %></td>
+  <td><%= goal.task_begin %></td>
+  <td><%= goal.status %></td>
+  <% if user_signed_in? %>
+      <th>
+        <%= link_to "Delete", goal,class: "btn btn-danger", method: :delete %>
+        <%= link_to "Update", edit_goal_path(goal), class: "btn btn-warning"  %>
+      </th>
+  <%end%>
+</tr>

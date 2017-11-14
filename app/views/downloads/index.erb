@@ -1,0 +1,52 @@
+<div class="container">
+  <br>
+  <h1 class="display-3" style="font-size:38px">OOCRAN Oficial Releases</h1>
+  <br>
+  <table class="table table-bordered">
+    <%= render "fields", name: "Version" %>
+    <tbody>
+    <% @oocran.each do |download| %>
+      <tr>
+        <td><%= download.name %></td>
+        <td><%= download.version %></td>
+        <td><%= download.created_at.strftime("%B %d, %Y") %></td>
+        <td>
+          <%=link_to(image_tag("github.png",alt: "Github", width: 35, heigh:35 ,style: "float:left;margin-right:10px"),download.links)%>
+          <% if download.version == "4.0.3" %>
+            <%=link_to(image_tag("tar.jpeg", alt: "Tar", width: 35, heigh:35 ,style: "float:left;margin-right:10px"),oocran_tar_url)%>
+            <%=link_to(image_tag("deb.png", alt: "Deb Package", width: 35, heigh:35 ,style: "float:left;margin-right:10px"),oocran_deb_url)%>
+            <%=link_to(image_tag("rpm.jpeg", alt: "RPM Package", width: 35, heigh:35 ,style: "float:left;margin-right:10px"),oocran_rpm_url)%>
+          <% end %>
+        </td>
+        <% if user_signed_in? %>
+            <th>
+              <%= link_to "Delete", download,class: "btn btn-danger", method: :delete %>
+              <%= link_to "Update", edit_download_path(download), class: "btn btn-warning"  %>
+            </th>
+        <%end%>
+      </tr>
+    <%end%>
+    </tbody>
+  </table>
+  <%= render "layouts/link", action: "downloads" %>
+
+  <h1 class="display-3" style="font-size:38px">Base Band Unit</h1>
+  <br>
+  <table class="table table-bordered">
+    <%= render "fields", name: "Version" %>
+    <tbody>
+      <tr>
+        <td>BBU</td>
+        <td>4.0.1</td>
+        <td>October 30, 2017</td>
+        <td>
+          <%=link_to(image_tag("github.png",alt: "Github", width: 35, heigh:35 ,style: "float:left; margin-right:10px"),"https://github.com/oocran/vbbu")%>
+          <%=link_to(image_tag("tar.jpeg", alt: "Tar", width: 35, heigh:35 ,style: "float:left; margin-right:10px"),bbu_tar_url)%>
+          <%=link_to(image_tag("deb.png", alt: "Deb Package", width: 35, heigh:35 ,style: "float:left; margin-right:10px"),bbu_deb_url)%>
+          <%=link_to(image_tag("rpm.jpeg", alt: "RPM Package", width: 35, heigh:35 ,style: "float:left; margin-right:10px"),bbu_rpm_url)%>
+          <%=link_to(image_tag("nix.png", alt: "Nix Package", width: 35, heigh:35 ,style: "float:left; margin-right:10px"),bbu_nix_url)%>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

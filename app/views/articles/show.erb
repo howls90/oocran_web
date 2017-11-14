@@ -1,0 +1,14 @@
+<div class="container">
+  <h1><%= @article.title %></h1>
+  <h5><%= @article.created_at.strftime("%B %d, %Y") %></h5>
+  <div style="text-align: center">
+    <%=image_tag @article.cover.url(:medium) %>
+  </div>
+  <br>
+  <%= simple_format(@article.body) %>
+  <br>
+  <% if user_signed_in? %>
+    <%= link_to "Delete", @article,class: "btn btn-danger", method: :delete %>
+    <%= link_to "Update", edit_article_path(@article), class: "btn btn-warning"  %>
+  <% end %>
+</div>

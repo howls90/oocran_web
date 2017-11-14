@@ -1,0 +1,23 @@
+<br>
+<h1><%= name %> Download</h1>
+<%= form_for(@download) do |f| %>
+    <% @download.errors.full_messages.each do |message| %>
+        <%= message%>
+    <%end%>
+    <div class="form-group">
+      <%= f.text_field :name,placeholder: "Name",class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_area :description,placeholder: "Description",class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :version,placeholder: "Version",class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.select :tipo, [["OOCRAN", "OOCRAN"], ["U-TRAN", "U-TRAN"], ["EPC", "EPC"], ["IMS", "IMS"], ["Infrastructure", "Infrastructure"]], class: "selectpicker" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :links,placeholder: "Links",class: "form-control" %>
+    </div>
+    <%= f.submit "Submit", class:"btn btn-default"%>
+<%end%>

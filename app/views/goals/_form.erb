@@ -1,0 +1,23 @@
+<br>
+<h1><%= name %> Goal</h1>
+<%= form_for(@goal) do |f| %>
+    <% @goal.errors.full_messages.each do |message| %>
+        <%= message%>
+    <%end%>
+    <div class="form-group">
+      <%= f.text_field :name,placeholder: "Name",class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_area :assigned_to,placeholder: "Assigned to",class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :task_begin,placeholder: "Task Begin",class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.select :tipo, [["Orchestrator", "Orchestrator"], ["Cluster", "Cluster"], ["U-TRAN", "U-TRAN"], ["IMS", "IMS"], ["EPC", "EPC"]], class: "selectpicker" %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :status,placeholder: "Status",class: "form-control" %>
+    </div>
+    <%= f.submit "Submit", class:"btn btn-default"%>
+<%end%>
