@@ -2,7 +2,7 @@
 
 Webpage for OOCRAN project.
 
-## Instalacion
+## Installation
 
 ```
 $ rake secret > command and copy result into the config/secret.yml file
